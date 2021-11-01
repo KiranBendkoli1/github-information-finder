@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media screen and (min-width:500px) {
+ .usercard{
+   width: 25rem;
+ }
+}

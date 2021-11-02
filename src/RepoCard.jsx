@@ -2,8 +2,8 @@ import React from 'react'
 
 const RepoCard = (props) => {
     return (
-        <div className="col-lg-4">
-            <div className="card shadow mt-2" style={{ width: "auto" , height:"20rem"}} >
+        <div className="col-lg-6">
+            <div className="card text-dark bg-light mb-3 shadow mt-2" style={{ width: "auto" , height:"20rem"}} >
                 <div className="card-body">
                     <h4 className="card-title">{props.repo.name}</h4>
                     <p>{props.repo.description}</p>

@@ -22,7 +22,7 @@ const Followings = (props) => {
     }, [])
     return (
         <>
-            <div className="container">
+            <div className="overflow-auto">
                 <center><h2 className="my-5">Followings of {props.userName}</h2></center>
                 <div className="mx-auto">
                     {

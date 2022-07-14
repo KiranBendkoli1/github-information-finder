@@ -1,22 +1,123 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #100d13;
+  min-height: "100vh";
 }
-
+html {
+  width: 100%;
+  height: 100%;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.mycard{
+.mycard {
+  background: #100d13;
   display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #4154ee;
   margin: auto;
-  justify-self:center;
+  justify-self: center;
   justify-content: center;
 }
-.mylink:hover{
+.usercard {
+  background: #100d13;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #4154ee;
+  margin: auto;
+  justify-self: center;
+  justify-content: center;
+}
+.usercard:hover{
+  box-shadow: 0 0 25px #4154ee;
+}
+.userlink{
+  text-decoration: none;
   cursor: pointer;
+ 
+}
+.mylink{
+  text-decoration: none;
+    background-color: #4154ee;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 1rem;
+}
+.mylink:hover {
+  box-shadow: 0 0 12px #4154ee;
+  cursor: pointer;
+  color: white;
+}
+.overflow-auto {
+  overflow-y: auto;
+}
+.list-group-item{
+  background-color: #100d13;
+  
+}
+.card-content{
+  background: #100d13 !important;
+  color: white !important;
+}
+.container {
+  background: #100d13;
+}
+input[text] {
+  background-color: #100d13;
+  color: white;
+}
+.title {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61px;
+  color: #4154ee;
+}
+.navbar{
+  box-shadow: 0 0 5px #4154ee;
+}
+.subtitle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 61px;
+  text-align: center;
+  color: #9d9898;
+}
+
+.acc-btn {
+  display: flex;
+  border-style: none;
+  outline-style: none;
+  justify-self: center;
+  size: 2rem;
+  margin-top: 1.5rem;
+  background-color: #4154ee;
+  align-items: center;
+
+  border-radius: 12px;
+  box-shadow: 0 0 10px #4154ee;
+  width: auto;
+  height: 57px;
+}
+.acc-btn:hover{
+  box-shadow: 0 0 20px #4154ee;
+}
+.acc-btn .acc-link {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: auto;
+  color: #100d13;
 }

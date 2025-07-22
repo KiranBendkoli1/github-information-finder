@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FaUsers, FaGithubAlt } from "react-icons/fa";
 import Followers from "./Followers";
 import Followings from "./Followings";

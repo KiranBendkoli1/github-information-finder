@@ -10,7 +10,7 @@ const Home = () => {
   const [page, setPage] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
 
-  const getUserInfo = async () => {
+  const getUserInfo = useCallback(async () => {
     try {
       let url = `https://api.github.com/users/${userName}`;
       console.log(url);
@@ -30,17 +30,17 @@ const Home = () => {
         public_repos,
       });
     } catch (error) {}
-  };
+  }, []);
 
   useEffect(() => {
     getUserInfo();
   }, [getUserInfo]);
-  useEffect(()=>{
-    window.addEventListener("resize", ()=>{
-      const ismobile = window.innerWidth <1200;
-      if( ismobile !== isMobile) setIsMobile(ismobile);
-    })
-  },[isMobile]);
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      const ismobile = window.innerWidth < 1200;
+      if (ismobile !== isMobile) setIsMobile(ismobile);
+    });
+  }, [isMobile]);
   const currentPage = (page) => {
     switch (page) {
       case "Followers":
@@ -63,8 +63,9 @@ const Home = () => {
         style={{ background: "#100d13 ", minHeight: "100vh" }}
       >
         <div className="row mt-2">
-          <div className={`${isMobile ? "col-6  mt-5":" col-6 fixed-top mt-5"}`}>
-          
+          <div
+            className={`${isMobile ? "col-6  mt-5" : " col-6 fixed-top mt-5"}`}
+          >
             <div className="input-group my-5">
               <input
                 type="text"
@@ -94,16 +95,25 @@ const Home = () => {
             </div>
             <div>
               {avatar_url ? (
-                <div className="card mycard usercard text-light  mb-3" style={{background:"#100d13"}}>
+                <div
+                  className="card mycard usercard text-light  mb-3"
+                  style={{ background: "#100d13" }}
+                >
                   <img src={avatar_url} className="card-img-top" alt="..." />
-                  <div className="card-body" >
-                    <h5 className="card-title" >Name: {name}</h5>
+                  <div className="card-body">
+                    <h5 className="card-title">Name: {name}</h5>
                     <p className="card-title">
                       <strong>Username: {userName}</strong>
                     </p>
                   </div>
-                  <ul className="list-group list-group-flush"  style={{background:"#100d13"}}>
-                    <li className="list-group-item"  style={{background:"#100d13"}}>
+                  <ul
+                    className="list-group list-group-flush"
+                    style={{ background: "#100d13" }}
+                  >
+                    <li
+                      className="list-group-item"
+                      style={{ background: "#100d13" }}
+                    >
                       <span
                         className="userlink"
                         onClick={() => setPage("Followers")}
@@ -111,7 +121,10 @@ const Home = () => {
                         <FaUsers size="1.3rem" /> &nbsp; Followers : {followers}{" "}
                       </span>
                     </li>
-                    <li className="list-group-item" style={{background:"#100d13"}}>
+                    <li
+                      className="list-group-item"
+                      style={{ background: "#100d13" }}
+                    >
                       <span
                         className="userlink"
                         onClick={() => setPage("Followings")}
@@ -119,8 +132,14 @@ const Home = () => {
                         <FaUsers size="1.3rem" /> &nbsp; Followings: {following}
                       </span>
                     </li>
-                    <li className="list-group-item" style={{background:"#100d13"}}>
-                      <span className="userlink" onClick={() => setPage("Repos")}>
+                    <li
+                      className="list-group-item"
+                      style={{ background: "#100d13" }}
+                    >
+                      <span
+                        className="userlink"
+                        onClick={() => setPage("Repos")}
+                      >
                         <FaGithubAlt size="1.3rem" /> &nbsp; Repositories :{" "}
                         {public_repos}
                       </span>

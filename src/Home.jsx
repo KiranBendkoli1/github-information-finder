@@ -89,7 +89,7 @@ const Home = () => {
                 type="button"
                 onClick={() => getUserInfo()}
               >
-                <a className="acc-link">Search</a>
+                <span className="acc-link">Search</span>
               </button>
             </div>
             <div>
@@ -104,26 +104,26 @@ const Home = () => {
                   </div>
                   <ul className="list-group list-group-flush"  style={{background:"#100d13"}}>
                     <li className="list-group-item"  style={{background:"#100d13"}}>
-                      <a
+                      <span
                         className="userlink"
                         onClick={() => setPage("Followers")}
                       >
                         <FaUsers size="1.3rem" /> &nbsp; Followers : {followers}{" "}
-                      </a>
+                      </span>
                     </li>
                     <li className="list-group-item" style={{background:"#100d13"}}>
-                      <a
+                      <span
                         className="userlink"
                         onClick={() => setPage("Followings")}
                       >
                         <FaUsers size="1.3rem" /> &nbsp; Followings: {following}
-                      </a>
+                      </span>
                     </li>
                     <li className="list-group-item" style={{background:"#100d13"}}>
-                      <a className="userlink" onClick={() => setPage("Repos")}>
+                      <span className="userlink" onClick={() => setPage("Repos")}>
                         <FaGithubAlt size="1.3rem" /> &nbsp; Repositories :{" "}
                         {public_repos}
-                      </a>
+                      </span>
                     </li>
                   </ul>
                   <div className="card-body">

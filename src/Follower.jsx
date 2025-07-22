@@ -15,7 +15,7 @@ const Follower = (props) => {
     }
     useEffect(() => {
        getFInfo();
-    }, [])
+    }, [getFInfo])
     
     return (
         <>

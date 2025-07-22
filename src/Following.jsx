@@ -15,7 +15,7 @@ const Following = (props) => {
     }
     useEffect(() => {
        getFInfo();
-    }, [])
+    }, [getFInfo])
     return (
         <>
             <div className="card mycard mb-3 card-content" style={{maxWidth: "540px"}}>

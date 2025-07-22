@@ -16,7 +16,7 @@ const Repositories = (props) => {
     }
     useEffect(() => {
         getRepoInfo()
-    }, [])
+    }, [getRepoInfo])
 
     return (
         <div className="Container">

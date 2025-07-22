@@ -34,7 +34,7 @@ const Home = () => {
 
   useEffect(() => {
     getUserInfo();
-  }, []);
+  }, [getUserInfo]);
   useEffect(()=>{
     window.addEventListener("resize", ()=>{
       const ismobile = window.innerWidth <1200;
@@ -75,7 +75,6 @@ const Home = () => {
                 style={{
                   background: "",
                   color: "white",
-                  marginTop: "1.4rem",
                   borderStyle: "none",
                   outlineStyle: "none",
                   justifySelf: "center",

@@ -19,7 +19,7 @@ const Followings = (props) => {
     }
     useEffect(() => {
         getFollowingInfo();
-    }, [])
+    }, [getFollowingInfo])
     return (
         <>
             <div className="overflow-auto">

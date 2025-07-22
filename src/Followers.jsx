@@ -17,7 +17,7 @@ const Followers = (props) => {
     }
     useEffect(() => {
         getFolloweInfo();
-    }, [])
+    }, [getFolloweInfo])
     return (
         <>
             <div className="container">
